@@ -1,0 +1,172 @@
+html {
+    font-size: 14px;
+}
+
+#root {
+    background: #E9DFC7;
+}
+
+#article-fiction {
+    padding: 0 1rem;
+    h4 {
+        font-size: 1.42rem;
+        line-height: 3rem;
+        color: #736357;
+        border-bottom: solid 0.07rem #736357;
+        letter-spacing: 0.1rem;
+        margin: 1.4rem 0;
+    }
+    p {
+        line-height: 1.71rem;
+        color: #555;
+        text-indent: 2rem;
+        margin: 0.5rem 0;
+    }
+}
+
+#footbar-fiction {
+    padding: 1rem;
+    .toggle-tab {
+        width: 19rem;
+        height: 2.42rem;
+        margin: 0.71rem auto;
+        line-height: 2.42rem;
+        border-radius: 0.57rem;
+        border: 0.07rem solid #858382;
+        font-size: 0.85rem;
+        background: #000;
+        opacity: 0.9;
+        padding: 0;
+        color: #fff;
+        li {
+            display: inline-block;
+            width: 49%;
+            border-right: 0.07rem solid #858382;
+            text-align: center;
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+
+#top-nav {
+    position: fixed;
+    top: 0;
+    height: 3.21rem;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    transform: translate3d(0, -100%, 0);
+    transition: transform .5s;
+    &.activate{
+        transform: translate3d(0,0,0);
+    }
+    .icon-back {
+        height: 1.64rem;
+        width: 1.64rem;
+        background: url("../img/data-image-png;base… (3).png") no-repeat;
+        background-size: contain;
+        margin: 0 0.71rem;
+    }
+    .nav-title {
+        color: #d5d5d6;
+    }
+}
+
+#bottom-nav {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 1000;
+    transition: transform .5s;
+    transform: translate3d(0, 100%, 0);
+    &.activate{
+        transform: translate3d(0,0,0);
+    }
+    .nav-banner {
+        color: #fff;
+        .child-mod {
+            padding: 1.42rem 1.78rem;
+            display: flex;
+            align-items: center;
+            span {
+                display: inline-block;
+                padding: 0 1.42rem 0 0.71rem;
+            }
+            .font-size-button {
+                background: none;
+                border: 0.07rem solid #8c8c8c;
+                color: #fff;
+                border-radius: 1.14rem;
+                padding: 0.35rem 2.85rem;
+                margin-right: 0.71rem;
+                outline: none;
+            }
+            .picker-container {
+                border-radius: 50%;
+                border: 0.15rem solid #ff7800;
+                display: inline-block;
+                margin-right: 0.71rem;
+            }
+            .picker-container-current {
+                width: 2.14rem;
+                height: 2.14rem;
+                border-radius: 50%;
+                background: #fff;
+            }
+        }
+    }
+
+    .toggle-button {
+        height: 5rem;
+        color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        [class^=icon] {
+            display: block;
+            width: 1.28rem;
+            height: 1.57rem;
+            margin: 0 auto;
+        }
+        .icon-catalog {
+            background: url("../img/data-image-png;base….png") no-repeat;
+            background-size: contain;
+        }
+        .icon-font {
+            background: url("../img/data-image-png;base… (1).png") no-repeat;
+            background-size: contain;
+        }
+        .icon-night {
+            background: url("../img/data-image-png;base… (2).png") no-repeat;
+            background-size: contain;
+        }
+        [class^=icon] + span {
+            font-size: 0.85rem;
+        }
+    }
+}
+#artical-action-wrapper{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top:0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+    .artical-action-head{
+        height: 30%;
+    }
+    .artical-action-mid{
+        height: 40%;
+    }
+    .artical-action-foot{
+        height: 30%;
+    }
+}
