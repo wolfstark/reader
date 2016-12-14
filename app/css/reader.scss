@@ -1,6 +1,13 @@
-html {
-    font-size: 14px;
-}
+@import "function";
+
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
 
 #root {
     background: #E9DFC7;
@@ -89,6 +96,7 @@ html {
     }
     .nav-banner {
         color: #fff;
+        display: none;
         .child-mod {
             padding: 1.42rem 1.78rem;
             display: flex;
@@ -121,6 +129,10 @@ html {
         }
     }
 
+    .nav-banner.activate{
+        display: block;
+    }
+
     .toggle-button {
         height: 5rem;
         color: #fff;
@@ -130,6 +142,10 @@ html {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        text-align: center;
+        li{
+            flex-grow: 1;
+        }
         [class^=icon] {
             display: block;
             width: 1.28rem;
@@ -140,7 +156,7 @@ html {
             background: url("../img/data-image-png;base….png") no-repeat;
             background-size: contain;
         }
-        .icon-font {
+        .icon-setting {
             background: url("../img/data-image-png;base… (1).png") no-repeat;
             background-size: contain;
         }
@@ -168,5 +184,8 @@ html {
     }
     .artical-action-foot{
         height: 30%;
+    }
+    .est{
+        width: px2em(50px);
     }
 }

@@ -37,12 +37,12 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('lib', 'lib-[hash].js'),
+        new webpack.optimize.CommonsChunkPlugin('lib', 'lib.js'),
         new HtmlWebpackPlugin({
             template: path.resolve(TEM_PATH, 'reader.html'),
             chunks: ['lib', 'app']
         }),
-        new ExtractTextPlugin('styles-[hash].css'),
+        new ExtractTextPlugin('styles.css'),
         //压缩混淆
         // new webpack.optimize.UglifyJsPlugin({minimize: true})
     ]

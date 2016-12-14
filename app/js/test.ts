@@ -1,11 +1,12 @@
-import  'normalize.css';
+import 'normalize.css';
 import '../css/reader.scss';
 
 import 'imports?jQuery=zeptov12-webpack!jquery.base64';
 import 'imports?jQuery=zeptov12-webpack!jquery.jsonp';
-import Vue from 'vue';
-
+import * as Vue from 'vue';
+new Vue();
 class Util {
+    prefix;
     constructor({prefix}) {
         this.prefix = prefix;
     }
@@ -22,7 +23,7 @@ class Util {
         return el.ownerDocument.defaultView.getComputedStyle(el, null);
     }
 }
-const util = new Util({prefix: 'html5_reader_'});
+const util = new Util({ prefix: 'html5_reader_' });
 
 const Dom = {
     topNav: document.getElementById('top-nav'),
@@ -64,7 +65,7 @@ function toggleSettingPanel() {
     toggleClass(Dom.settingPanel, 'activate');
 }
 
-function toggleMenuUI(action) {
+function toggleMenuUI(action?) {
     if (action === 'close') {
         Dom.topNav.classList.remove('activate');
         Dom.bottomNav.classList.remove('activate');
@@ -105,4 +106,4 @@ function getClickLocation(yIndex) {
 void function main() {
     //todo 整个项目的入口函数
     eventHandler();
-}();
+} ();
