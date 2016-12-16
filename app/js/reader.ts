@@ -99,7 +99,9 @@ function toggleMenuUI(action?): void {
     }
 }
 
+function pageTurning(): void {
 
+}
 
 /**
  * @overview 获取点击目标在屏幕中的大概区块位置
