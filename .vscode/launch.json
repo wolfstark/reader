@@ -5,9 +5,9 @@
             "name": "Launch Chrome against localhost, with sourcemaps",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:8080",
+            "url": "http://www.xiaosuo.com:8080",
             "sourceMaps": true,
-            "webRoot": "${workspaceRoot}/build/index.html",
+            "webRoot": "${workspaceRoot}",
             "runtimeExecutable": "E:/Tools/Chrome/chrome.exe"
         },
         {
