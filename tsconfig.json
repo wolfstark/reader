@@ -3,10 +3,10 @@
         "target": "es5",
         // "module": "commonjs",
         // "sourceMap": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         // "removeComments": false
         // "experimentalDecorators": true,
-        "lib": ["es5", "es2015.promise", "dom"]
+        "lib": ["es6", "dom"]
     }
     ,
     "exclude": [

@@ -1,25 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <!--<meta name="viewport"-->
-          <!--content="width=device-width, user-scalable=no,  maximum-scale=1.0, minimum-scale=1.0">-->
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            padding: 0;
+        * {
             margin: 0;
+            padding: 0;
         }
-        .box1{
-            width: 540px;
-            height: 540px;
-            background: red;
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        body {
+            width: 100%;
+        }
+        
+        nav {
+            height: 200px;
+            background-color: #555;
+        }
+        
+        li {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .text {
+            color: #FFF;
+            position: absolute;
+            top: 300px;
+            left: 150px;
+            width: 200px;
+            z-index: 100;
+        }
+        
+        .bg {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
+
 <body>
-    <div class="box1"></div>
+    <nav></nav>
+    <ul>
+        <li>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima labore veritatis beatae magni nam suscipit totam
+                sapiente officia, nihil repellendus, quis tenetur accusamus consectetur animi nemo numquam. Aliquid, atque,
+                ea.
+            </div>
+            <div class="bg" style="background-image: url(http://img.saihuitong.com/img/20160601135714359/1550a898bf7.jpg?imageView2/1/w771/h/933);height: 100%"></div>
+        </li>
+        <li>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur tempora autem eum quas doloribus consectetur.
+                Cumque aperiam quos, error accusantium, reprehenderit quidem quis debitis quasi odit autem! Minima, repellat
+                id!
+            </div>
+            <div class="bg" style="background-image: url(http://img.saihuitong.com/img/2016060113573746/1550a89e496.jpg?imageView2/1/w771/h/933);height: 100%"></div>
+        </li>
+        <li>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem minus enim consectetur quis iure assumenda,
+                rerum velit quaerat facilis aperiam voluptatibus quia, dolores, illo ea. Molestiae tempora veritatis beatae
+                ipsa.
+            </div>
+            <div class="bg" style="background-image: url(http://img.saihuitong.com/img/20160601135755234/1550a8a2ba2.jpg?imageView2/1/w771/h/933);height: 100%"></div>
+        </li>
+    </ul>
+    <script>
+        let lis = document.querySelectorAll('li');
+        const navHeight = document.querySelector('nav').getBoundingClientRect().height;
+
+        lis = [].slice.call(lis);
+        lis.forEach(item => {
+            item.style.setProperty('height', `${window.innerHeight}px`);
+        });
+
+        window.addEventListener('scroll', e => {
+            if (navHeight < window.pageYOffset) {
+
+            }
+        });
+    </script>
 </body>
+
 </html>
