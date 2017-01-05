@@ -119,6 +119,6 @@ function getClickLocation(yIndex: number): string {
 }
 
 void function main(): void {
-    // todo 整个项目的入口函数
+    // todo 整个项目的入口函数+
     eventHandler();
 } ();
